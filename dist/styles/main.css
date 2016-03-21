@@ -12,14 +12,26 @@ body {
   text-transform: uppercase;
   text-shadow: 1px 1px 1px #000; }
 
+.displayArea {
+  width: 100%; }
+
 .numberInput, #answer, .button {
   height: 60px;
   background-color: #00cc00;
   font-size: 3em;
-  border: 2px solid #fff;
-  color: #fff;
-  border-radius: 5px;
-  margin: 5px; }
+  border: 1px solid #fff;
+  color: #fff; }
+
+.button {
+  display: inline-block;
+  text-align: center;
+  padding-top: 9px;
+  height: 78px;
+  width: 92px;
+  font-size: 3em;
+  margin: 0;
+  margin-right: -5px;
+  box-shadow: inset 0 -2px 2px 2px #000; }
 
 .numberInput {
   color: #fff;
@@ -28,32 +40,39 @@ body {
   padding-left: 11px; }
 
 #answer {
-  height: 62px;
+  height: 73px;
   float: right;
-  width: 100%;
-  padding-left: 11px; }
-
-.input {
-  clear: both;
-  float: right;
-  width: 40%; }
-
-.numbers {
-  width: 50%;
-  float: left; }
-
-.button {
-  display: inline-block;
-  text-align: center;
-  padding-top: 8px;
-  height: 32px;
-  width: 40px;
-  font-size: 1em;
+  width: calc(100% - 95px);
+  padding-top: 9px;
+  padding-left: 11px;
+  margin: 0;
   box-shadow: inset 0 -2px 2px 2px #000; }
 
+.equations {
+  clear: both;
+  float: right;
+  margin-right: 5px; }
+
+.equations .button {
+  display: block;
+  float: none; }
+
 .button:active {
-  padding-top: 10px;
-  height: 30px;
+  padding-top: 11px;
+  height: 76px;
+  box-shadow: inset 0 2px 2px 2px #000; }
+
+#clear {
+  float: left;
+  font-size: 3em;
+  height: 73px;
+  width: 80px;
+  padding-top: 9px;
+  margin: 0; }
+
+#clear:active {
+  padding-top: 11px;
+  height: 71px;
   box-shadow: inset 0 2px 2px 2px #000; }
 
 body {
@@ -70,14 +89,26 @@ body {
   text-transform: uppercase;
   text-shadow: 1px 1px 1px #000; }
 
+.displayArea {
+  width: 100%; }
+
 .numberInput, #answer, .button {
   height: 60px;
   background-color: #00cc00;
   font-size: 3em;
-  border: 2px solid #fff;
-  color: #fff;
-  border-radius: 5px;
-  margin: 5px; }
+  border: 1px solid #fff;
+  color: #fff; }
+
+.button {
+  display: inline-block;
+  text-align: center;
+  padding-top: 9px;
+  height: 78px;
+  width: 92px;
+  font-size: 3em;
+  margin: 0;
+  margin-right: -5px;
+  box-shadow: inset 0 -2px 2px 2px #000; }
 
 .numberInput {
   color: #fff;
@@ -86,30 +117,37 @@ body {
   padding-left: 11px; }
 
 #answer {
-  height: 62px;
+  height: 73px;
   float: right;
-  width: 100%;
-  padding-left: 11px; }
-
-.input {
-  clear: both;
-  float: right;
-  width: 40%; }
-
-.numbers {
-  width: 50%;
-  float: left; }
-
-.button {
-  display: inline-block;
-  text-align: center;
-  padding-top: 8px;
-  height: 32px;
-  width: 40px;
-  font-size: 1em;
+  width: calc(100% - 95px);
+  padding-top: 9px;
+  padding-left: 11px;
+  margin: 0;
   box-shadow: inset 0 -2px 2px 2px #000; }
 
+.equations {
+  clear: both;
+  float: right;
+  margin-right: 5px; }
+
+.equations .button {
+  display: block;
+  float: none; }
+
 .button:active {
-  padding-top: 10px;
-  height: 30px;
+  padding-top: 11px;
+  height: 76px;
+  box-shadow: inset 0 2px 2px 2px #000; }
+
+#clear {
+  float: left;
+  font-size: 3em;
+  height: 73px;
+  width: 80px;
+  padding-top: 9px;
+  margin: 0; }
+
+#clear:active {
+  padding-top: 11px;
+  height: 71px;
   box-shadow: inset 0 2px 2px 2px #000; }
