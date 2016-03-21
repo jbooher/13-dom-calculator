@@ -2,10 +2,27 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Assignment 13 - Calculator</title>
     <link rel="stylesheet" href="/styles/main.css">
   </head>
   <body>
+    <div class="calculator">
+      <h1 class="heading">Calculator</h1>
+
+      <div id="answer"></div>
+
+      <input class="numberInput" id="numberOne" type="text" placeholder="0">
+      <input class="numberInput" id="numberTwo" type="text" placeholder="0">
+
+      <div class="input">
+        <input class="equations" id="addNumbers" type="submit" value="+">
+        <input class="equations" id="subtractNumbers" type="submit" value="-">
+        <input class="equations" id="divideNumbers" type="submit" value="/">
+        <input class="equations" id="multiplyNumbers" type="submit" value="*">
+        <input class="equations" id="clear" type="submit" value="C">
+      </div>
+
+    </div>
     <script src="/js/app.js" charset="utf-8"></script>
   </body>
 </html>
