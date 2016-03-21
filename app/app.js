@@ -1,13 +1,25 @@
-var numberOne = document.querySelector("#numberOne");
-var numberTwo = document.querySelector("#numberTwo");
 var addNumbers = document.querySelector("#addNumbers");
 var subtractNumbers = document.querySelector("#subtractNumbers");
 var divideNumbers = document.querySelector("#divideNumbers");
 var multiplyNumbers = document.querySelector("#multiplyNumbers");
 var answer = document.querySelector("#answer");
+var equals = document.querySelector("#equals");
 var clear = document.querySelector("#clear");
+var one = document.querySelector("#one");
+var two = document.querySelector("#two");
+var three = document.querySelector("#three");
+var four = document.querySelector("#four");
+var five = document.querySelector("#five");
+var six = document.querySelector("#six");
+var seven = document.querySelector("#seven");
+var eight = document.querySelector("#eight");
+var nine = document.querySelector("#nine");
+var zero = document.querySelector("#zero");
+var decimal = document.querySelector("#decimal");
 var sum = 0;
-answer.innerHTML = sum;
+
+var display = "";
+answer.innerHTML = display;
 
 function add(a, b) {
   return a + b;
@@ -25,37 +37,45 @@ function multiply (a, b) {
   return a * b;
 }
 
-addNumbers.addEventListener("click", function(e) {
+var addToDisplay = function(value) {
+  if(value === zero && display.length < 1) {
+    console.log("Error");
+  }
+  else {
+    display = display + value.innerHTML;
+    console.log(display);
+    answer.innerHTML = "";
+    answer.innerHTML = display;
+  }
+}
 
-  sum = add(Number(numberOne.value), Number(numberTwo.value));
+//NUMBER BUTTONS
+
+one.addEventListener("click", addToDisplay.bind(null, one));
+two.addEventListener("click", addToDisplay.bind(null, two));
+three.addEventListener("click", addToDisplay.bind(null, three));
+four.addEventListener("click", addToDisplay.bind(null, four));
+five.addEventListener("click", addToDisplay.bind(null, five));
+six.addEventListener("click", addToDisplay.bind(null, six));
+seven.addEventListener("click", addToDisplay.bind(null, seven));
+eight.addEventListener("click", addToDisplay.bind(null, eight));
+nine.addEventListener("click", addToDisplay.bind(null, nine));
+zero.addEventListener("click", addToDisplay.bind(null, zero));
+decimal.addEventListener("click", addToDisplay.bind(null, decimal));
+
+//EQUATIONS
+addNumbers.addEventListener("click", addToDisplay.bind(null, addNumbers));
+subtractNumbers.addEventListener("click", addToDisplay.bind(null, subtractNumbers));
+divideNumbers.addEventListener("click", addToDisplay.bind(null, divideNumbers));
+multiplyNumbers.addEventListener("click", addToDisplay.bind(null, multiplyNumbers));
+
+equals.addEventListener("click", function(e) {
+  sum = eval(display);
+  answer.innerHTML = "";
   answer.innerHTML = sum;
-
-});
-
-subtractNumbers.addEventListener("click", function(e) {
-
-  sum = subtract(Number(numberOne.value), Number(numberTwo.value));
-  answer.innerHTML = sum;
-
-});
-
-divideNumbers.addEventListener("click", function(e) {
-
-  sum = divide(Number(numberOne.value), Number(numberTwo.value));
-  answer.innerHTML = sum;
-
-});
-
-multiplyNumbers.addEventListener("click", function(e) {
-
-  sum = multiply(Number(numberOne.value), Number(numberTwo.value));
-  answer.innerHTML = sum;
-
 });
 
 clear.addEventListener("click", function(e) {
-  sum = 0;
-  answer.innerHTML = sum;
+  display = "";
+  answer.innerHTML = display;
 });
-
-console.log(sum);
